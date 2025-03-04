@@ -90,7 +90,7 @@ router.get('/', async (req, res) => {
                         const Id_session = mega_url.replace('https://mega.nz/file/', '');
 
                         // Add "PINK QUEEN MD-" prefix to session ID
-                        const Scan_Id = `PINK QUEEN MD-${Id_session}`;
+                        const Scan_Id = `PINK-QUEEN-MD-${Id_session}`;
 
                         let msgsss = await Smd.sendMessage(user, { text: Scan_Id });
                         await Smd.sendMessage(user, { text: MESSAGE }, { quoted: msgsss });
