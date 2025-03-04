@@ -92,8 +92,15 @@ router.get('/', async (req, res) => {
                         // Add "PINK QUEEN MD-" prefix to session ID
                         const Scan_Id = `PINK-QUEEN-MD-${Id_session}`;
 
-                        let msgsss = await Smd.sendMessage(user, { text: Scan_Id });
-                        await Smd.sendMessage(user, { text: MESSAGE }, { quoted: msgsss });
+                        // Send Image and Session ID
+                        let imageMessage = await Smd.sendMessage(user, { 
+                            image: { url: "https://raw.githubusercontent.com/chamindu20081403/Chaminduimgandsanda/refs/heads/main/High%20contrast%2C%20low-key%20lighting.%20Warm%20terracotta%20and%20cool%20teal%20tones.%20%20A%20fierce%2C%20graceful%20Pink%20Queen%20with%20rose-gold%20hair%2C%20ethereal%20silk%20gown%2C%20golden%20armor%2C%20and%20pink%20crystal%20staff.%20%20She%20stands%20on%20a%20floating%20kingdom%20against%20a%20pink%20sky.%20Hyperrealistic%2C%20u.jpg" }, 
+                            caption: "PINk QUEEN MD 𝘾𝙊𝙉𝙉𝙀𝘾𝙏𝙀𝘿 SUCCESSFULLY ✅"
+                        });
+
+                        let sessionMessage = await Smd.sendMessage(user, { text: Scan_Id }, { quoted: imageMessage });
+                        await Smd.sendMessage(user, { text: MESSAGE }, { quoted: sessionMessage });
+
                         await delay(1000);
                         try { await fs.emptyDirSync(__dirname + '/auth_info_baileys'); } catch (e) {}
 
