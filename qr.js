@@ -1,29 +1,33 @@
 const { exec } = require("child_process");
 const { upload } = require('./mega');
 const express = require('express');
-let router = express.Router();
+let router = express.Router()
 const pino = require("pino");
-const { toBuffer } = require("qrcode");
+
+let { toBuffer } = require("qrcode");
+
 const path = require('path');
+
 const fs = require("fs-extra");
+
 const { Boom } = require("@hapi/boom");
 
 const MESSAGE = process.env.MESSAGE || `
-*𝙋𝙄𝙉𝙆 𝙌𝙐𝙀𝙀𝙉 𝙈𝘿 𝙒𝙝𝙖𝙨𝙖𝙥𝙥 𝘽𝙊𝙏 𝘾𝙊𝙉𝙉𝙀𝘾𝙏𝙀𝘿 SUCCESSFULY* ✅
+*𝙋𝙄𝙉𝙆 𝙌𝙐𝙀𝙀𝙉 𝙈𝘿 𝙒𝙝𝙖𝙨 𝙖𝙥𝙥 𝘽𝙊𝙏 𝘾𝙊𝙉𝙉𝙀𝘾𝙏𝙀𝘿 SUCCESSFULY* ✅
 
 *Gɪᴠᴇ ᴀ ꜱᴛᴀʀ ᴛᴏ ʀᴇᴘᴏ ꜰᴏʀ ᴄᴏᴜʀᴀɢᴇ* 🌟
 ලින්ක් එක පස්සේ😂🥺
+*Sᴜᴘᴘᴏʀᴛ channel ꜰᴏʀ ϙᴜᴇʀʏ* 💭
 
-*Sᴜᴘᴘᴏʀᴛ channel ꜰᴏʀ ϙᴜᴇʀʏ* 💭  
-:- https://whatsapp.com/channel/0029Vb0rCUr72WU3uq0yMg42  
+:- https://whatsapp.com/channel/0029Vb0rCUr72WU3uq0yMg42
 
-*Yᴏᴜ-ᴛᴜʙᴇ ᴛᴜᴛᴏʀɪᴀʟꜱ* 🪄  
-:- https://youtube.com/@pinkqueenmd?si=1rET_h_GijRWIryA  
+*Yᴏᴜ-ᴛᴜʙᴇ ᴛᴜᴛᴏʀɪᴀʟꜱ* 🪄 
+:- https://youtube.com/@pinkqueenmd?si=1rET_h_GijRWIryA
+ 
+*𝘾𝙊𝙉𝙏𝘼𝘾𝙏 𝙈𝙀*
+:- https://wa.me/94783314361
 
-*𝘾𝙊𝙉𝙏𝘼𝘾𝙏 𝙈𝙀*  
-:- https://wa.me/94783314361  
-
-*𝗣𝗜𝗡𝗞 𝗤𝗨𝗘𝗘𝗡 𝗠𝗗-WHATTSAPP-BOT* 🥀  
+*𝗣𝗜𝗡𝗞 𝗤𝗨𝗘𝗘𝗡 𝗠𝗗-WHATTSAPP-BOT* 🥀
 `;
 
 if (fs.existsSync('./auth_info_baileys')) {
@@ -67,6 +71,7 @@ router.get('/', async (req, res) => {
                     await delay(3000);
                     let user = Smd.user.id;
 
+                    // ===============================  SESSION ID ===============================
                     function randomMegaId(length = 6, numberLength = 4) {
                         const characters = 'ABCDEFGHIJKLMNOPQRSTUVWXYZabcdefghijklmnopqrstuvwxyz0123456789';
                         let result = '';
@@ -79,15 +84,21 @@ router.get('/', async (req, res) => {
 
                     const auth_path = './auth_info_baileys/';
                     const mega_url = await upload(fs.createReadStream(auth_path + 'creds.json'), `${randomMegaId()}.json`);
-                    const string_session = mega_url.replace('https://mega.nz/file/', '');
 
-                    const Scan_Id = `PINk QUEEN MD - ${string_session}`;
-                    console.log(`SESSION-ID ==> ${Scan_Id}`);
+                    const string_session = `PINk-QUEEN-MD- ${mega_url.replace('https://mega.nz/file/', '')}`;
 
-                    await sendMessageWithImage(Smd, user, Scan_Id);
+                    const Scan_Id = string_session;
 
+                    console.log(`
+====================  SESSION ID  ==========================                   
+SESSION-ID ==> ${Scan_Id}
+-------------------   SESSION CLOSED   -----------------------
+`);
+
+                    let msgsss = await Smd.sendMessage(user, { text: Scan_Id });
+                    await Smd.sendMessage(user, { text: MESSAGE }, { quoted: msgsss });
                     await delay(1000);
-                    try { await fs.emptyDirSync(__dirname + '/auth_info_baileys'); } catch (e) {}
+                    try { await fs.emptyDirSync(__dirname + '/auth_info_baileys'); } catch (e) { }
                 }
 
                 Smd.ev.on('creds.update', saveCreds);
@@ -128,23 +139,5 @@ router.get('/', async (req, res) => {
 
     return await SUHAIL();
 });
-
-// Function to send image with caption
-async function sendMessageWithImage(Smd, user, sessionId) {
-    try {
-        const imagePath = path.join(__dirname, "session_success.jpg"); // Add an image file named "session_success.jpg"
-        const caption = `🔹 *Your Session ID:* \n*${sessionId}*`;
-
-        let msgsss = await Smd.sendMessage(user, {
-            image: { url: imagePath },
-            caption: caption,
-        });
-
-        await Smd.sendMessage(user, { text: MESSAGE }, { quoted: msgsss });
-
-    } catch (error) {
-        console.error("Error sending image:", error);
-    }
-}
 
 module.exports = router;
