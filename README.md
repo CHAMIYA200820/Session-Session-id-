@@ -1,42 +1,53 @@
 <h1 align="center">
-  <img src="https://img.shields.io/badge/PINk%20QUEEN%20MD-%F0%9F%A5%80-pink?style=for-the-badge&logo=whatsapp" alt="PINk QUEEN MD">
+  <img src="https://readme-typing-svg.herokuapp.com?font=Fira+Code&pause=1000&color=F705F7&center=true&vCenter=true&width=500&lines=🔥+PINk+QUEEN+MD+🔥;💖+WhatsApp+Bot+💖;🚀+Fast+and+Powerful+🚀" alt="Typing SVG" />
 </h1>
 
 <p align="center">
-  <img src="https://raw.githubusercontent.com/PINkQUEENMD/WhatsApp-Bot/main/assets/logo.png" alt="PINk QUEEN MD Logo" width="200">
+  <img src="https://i.imgur.com/zXQwJhf.png" width="200">
 </p>
+
+---
+
+### 🌟 **Gɪᴠᴇ ᴀ ꜱᴛᴀʀ ᴛᴏ ʀᴇᴘᴏ ꜰᴏʀ ᴄᴏᴜʀᴀɢᴇ** 🌟  
+💖 *ලින්ක් එක පස්සේ 😂🥺*  
 
 <p align="center">
-  <img src="https://img.shields.io/badge/WhatsApp%20Bot-Online-green?style=for-the-badge">
-  <img src="https://img.shields.io/github/stars/PINkQUEENMD/WhatsApp-Bot?style=for-the-badge&color=yellow">
-  <img src="https://img.shields.io/github/forks/PINkQUEENMD/WhatsApp-Bot?style=for-the-badge&color=blue">
+  <a href="https://github.com/your-repo-link">
+    <img src="https://img.shields.io/github/stars/your-repo-link?style=for-the-badge&color=yellow" alt="GitHub Repo Stars">
+  </a>
 </p>
 
 ---
 
-## 🌸 **PINk QUEEN MD - WhatsApp Bot**
-✨ _ඔබේ WhatsApp අලංකාර කිරීමට සූදානම්!_  
-🚀 **PINk QUEEN MD** යනු **ඉතා වේගවත්**, **විශ්වාසදායක**, සහ **අතිශය හොඳ Features සහිත** WhatsApp Bot එකකි.
+### 💭 **Sᴜᴘᴘᴏʀᴛ ᴄʜᴀɴɴᴇʟ ᴄᴏɴᴛᴀᴄᴛ**
+<p align="center">
+  <a href="https://whatsapp.com/channel/0029Vb0rCUr72WU3uq0yMg42">
+    <img src="https://img.shields.io/badge/WhatsApp-Support%20Channel-green?style=for-the-badge&logo=whatsapp">
+  </a>
+</p>
 
 ---
 
-## 🎯 **BOT FEATURES**
-✅ **Auto Reply**  
-✅ **Sticker Maker**  
-✅ **Group Management**  
-✅ **Downloaders (YouTube, TikTok, Instagram, Facebook)**  
-✅ **AI Chat Bot**  
-✅ **Custom Commands**  
-✅ **And Many More...!**  
-
-📌 **Full Feature List** - [Click Here](https://github.com/PINkQUEENMD/WhatsApp-Bot/wiki)  
+### 🎥 **Yᴏᴜ-ᴛᴜʙᴇ ᴛᴜᴛᴏʀɪᴀʟꜱ** 🪄
+<p align="center">
+  <a href="https://youtube.com/@pinkqueenmd?si=1rET_h_GijRWIryA">
+    <img src="https://img.shields.io/badge/YouTube-Tutorials-red?style=for-the-badge&logo=youtube">
+  </a>
+</p>
 
 ---
 
-## 🚀 **DEPLOY BOT (EASY METHOD)**  
-📱 **Scan QR Code & Get Started!**  
-```sh
-git clone https://github.com/PINkQUEENMD/WhatsApp-Bot.git
-cd WhatsApp-Bot
-npm install
-node start.js
+### 📞 **𝘾𝙊𝙉𝙏𝘼𝘾𝙏 𝙈𝙀**  
+📩 **WhatsApp:**  
+<p align="center">
+  <a href="https://wa.me/94783314361">
+    <img src="https://img.shields.io/badge/Contact%20Me%20on%20WhatsApp-%2300E676.svg?style=for-the-badge&logo=whatsapp&logoColor=white" alt="WhatsApp Contact">
+  </a>
+</p>
+
+---
+
+### 🤖 **𝗣𝗜𝗡𝗞 𝗤𝗨𝗘𝗘𝗡 𝗠𝗗 - WHATSAPP BOT** 🥀  
+📌 *Fast | Secure | Multi-functional*  
+🚀 *Easy to use | Free | Open Source*  
+🔥 **Install & Use Now!**  
