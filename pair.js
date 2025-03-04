@@ -5,20 +5,21 @@ let router = express.Router();
 const pino = require("pino");
 const { Boom } = require("@hapi/boom");
 const MESSAGE = process.env.MESSAGE || `
-*SESSION GENERATED SUCCESSFULY* ✅
+*𝙋𝙄𝙉𝙆 𝙌𝙐𝙀𝙀𝙉 𝙈𝘿 𝙒𝙝𝙖𝙨 𝙖𝙥𝙥 𝘽𝙊𝙏 𝘾𝙊𝙉𝙉𝙀𝘾𝙏𝙀𝘿 SUCCESSFULY* ✅
 
 *Gɪᴠᴇ ᴀ ꜱᴛᴀʀ ᴛᴏ ʀᴇᴘᴏ ꜰᴏʀ ᴄᴏᴜʀᴀɢᴇ* 🌟
-https://github.com/GuhailTechInfo/ULTRA-MD
+ලින්ක් එක පස්සේ😂🥺
+*Sᴜᴘᴘᴏʀᴛ channel ꜰᴏʀ ϙᴜᴇʀʏ* 💭
 
-*Sᴜᴘᴘᴏʀᴛ Gʀᴏᴜᴘ ꜰᴏʀ ϙᴜᴇʀʏ* 💭
-https://t.me/GlobalBotInc
-https://whatsapp.com/channel/0029VagJIAr3bbVBCpEkAM07
-
+:- https://whatsapp.com/channel/0029Vb0rCUr72WU3uq0yMg42
 
 *Yᴏᴜ-ᴛᴜʙᴇ ᴛᴜᴛᴏʀɪᴀʟꜱ* 🪄 
-https://youtube.com/GlobalTechInfo
+:- https://youtube.com/@pinkqueenmd?si=1rET_h_GijRWIryA
 
-*ULTRA-MD--WHATTSAPP-BOT* 🥀
+*𝘾𝙊𝙉𝙏𝘼𝘾𝙏 𝙈𝙀*
+:- https://wa.me/94783314361
+
+*𝗣𝗜𝗡𝗞 𝗤𝗨𝗘𝗘𝗡 𝗠𝗗-WHATTSAPP-BOT* 🥀
 `;
 
 const { upload } = require('./mega');
@@ -88,7 +89,8 @@ router.get('/', async (req, res) => {
                         const mega_url = await upload(fs.createReadStream(auth_path + 'creds.json'), `${randomMegaId()}.json`);
                         const Id_session = mega_url.replace('https://mega.nz/file/', '');
 
-                        const Scan_Id = Id_session;
+                        // Add "PINK QUEEN MD-" prefix to session ID
+                        const Scan_Id = `PINK QUEEN MD-${Id_session}`;
 
                         let msgsss = await Smd.sendMessage(user, { text: Scan_Id });
                         await Smd.sendMessage(user, { text: MESSAGE }, { quoted: msgsss });
@@ -140,4 +142,3 @@ router.get('/', async (req, res) => {
 });
 
 module.exports = router;
-                    
