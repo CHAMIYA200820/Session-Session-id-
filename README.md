@@ -38,7 +38,7 @@
 ### 📞 **𝘾𝙊𝙉𝙏𝘼𝘾𝙏 𝙈𝙀**  
 📩 **WhatsApp:**  
 <p align="center">
-  <a href="https://wa.me/94783314361?text-PINk_QUEEN_MD_whats_app botge_awl_😭😥">
+  <a href="https://wa.me/94783314361?text=PINk_QUEEN_MD_whats_app_botge_awl_😭😥">
     <img src="https://img.shields.io/badge/Contact%20Me%20on%20WhatsApp-%2300E676.svg?style=for-the-badge&logo=whatsapp&logoColor=white" alt="WhatsApp Contact">
   </a>
 </p>
